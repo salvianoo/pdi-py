@@ -10,7 +10,7 @@ for i in xrange(1, width - 1):
         medias = list()
 
         for color in xrange(3):
-            sum_of_neighbors = (
+            sum_of_neighbors_pixels = (
                 data[i - 1, j][color] +
                 data[i + 1, j][color] +
                 data[i, j - 1][color] +
@@ -21,7 +21,7 @@ for i in xrange(1, width - 1):
                 data[i - 1, j + 1][color] +
                 data[i, j][color]
             )
-            medias.append(sum_of_neighbors / 9)
+            medias.append(sum_of_neighbors_pixels / 9)
 
         data[i, j] = medias[0], medias[1], medias[2]
 
