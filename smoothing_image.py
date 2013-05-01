@@ -23,7 +23,7 @@ for i in xrange(1, width - 1):
             )
             medias.append(sum_of_neighbors_pixels / 9)
 
-        data[i, j] = medias[0], medias[1], medias[2]
+        data[i, j] = tuple(medias)
 
 image.show()
 # image.save("output_image.jpg", "JPEG")
